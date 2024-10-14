@@ -77,3 +77,23 @@ def manipulte_list(current):
         print("Invalid choice")
     
     return
+
+#function to check if current == target
+
+def list_match(current, target):
+    return current == target
+
+#Game loop
+
+gameOver = False
+
+target_list = genrate_target();
+
+while not gameOver:
+    if list_match(my_list, target_list):
+        print("Congrats you win")
+        gameOver = True
+        break
+    else:
+        display_lists(my_list, target_list)
+        manipulte_list(my_list)
